@@ -1,5 +1,240 @@
-Example that Shoria has created, right? If you can come up with this script, it will be helpful. Like, you can create, like, all the external tables at one go. Okay. So, So basically we are identifying the one which doesn't have like a P-Lab or a broad suffix. Yeah, so, so, so for you, um, the task is, any schema that you are seeing here, under high medical store. Right? It doesn't start with, um, E lab, right? Okay. At this in your in your list. Okay? So example could be like these are the all five, all schemas. But if you check the message I pasted in the chat, analytics, right? Um, let me know if you want me to bring this thing here on the screen as well. Excluding this remaining ones. Yes, we need to exclude these schema. Because your focus is only on without broad lab prefix, right? Um, so, you can exclude analytics schema. Your 1st thing that that appears on this admin advantage, PII. Okay. Here we have 2 tables. And the reference part is coming from plot left storage income. Instead, we want cable creation based on the broad, broad data link. Okay. Right? And that's where our script becomes something like, you know, create external table. Tickima, which is large schema, table name, and then location. Here, you are going to make a change, storage account name. So, basic in P-Lab, we are creating, currently we have P-Lab path. We are changing it to Broad path. Changing a schema to prod. Yes, exactly. Okay. And that we require for the uh, the schema. Up until it starts with elap. I have also exploded anything that starts with OPS clean service line. Um, And then ISP Steve, too. So you can map it back to this list. Okay, so it is easier for you to identify which ones are in our scope. Okay. So, if, like, you both can tickle these, uh, so I'll just, like, uh, I'll let Melvin here. And sure, yeah, I'm adding you to this one. Um, Shawya, can you take a look into the view as well? Uh, views for which one? Uh, views for product. So anything that starts with broad lab, similar to, like, table, like, If there are any examples that show you.
+Uh, you are supposed to maintain a phone code changes, great, uh, uh, like set up all necessary code and everything.
 
+Okay.
+
+Uh, I'm not sure on that part, whether, sorry, Sauriya did it, but he asks us to set up the call with you regarding this.
+
+They, the crowd, the cloud catalogue module is already approved, right?
+
+Are you aware of that?
+
+A CloudCatlug models are probably a good CloudCatlug.
+
+But copying the CloudCatlug, they are set up our, they are supposed to set up our own repository with our own kind of phone code.
+
+So, we will be, like, using, following the examples of what's then in the cloud catalogue, but we will be setting up our role in our concord.
+
+So that was what we were supposed to do.
+
+Sure, you did that.
+
+Here, let me share my screen.
+
+Sure.
+
+Wait, do you mean?
+
+Sure, you said he set up this briefing.
+
+Like, I created this supposedly, I remember creating it, but the problem is I'm in this repository, like, right now.
+
+And what I see is it's pretty minimalistic.
+
+There is nothing comparatively what we are using, but we are seeing in cloud catalogue.
+
+So, for example, to create the capacities, uh, we need few futures, which is already there, and, like, yard kettla, but, but I don't see anything here.
+
+Okay.
+
+So, so what are the next steps on this?
+
+Like, uh, like, in terms of setting up this, uh, fabric capacity.
+
+I have to, uh, start working on the, uh, Telephone code.
+
+So, okay, for example, if you see, I share, can you go into the Ingram is folder, please?
+
+Anyone, any, any part.
+
+So this is, there is nothing here.
+
+It's just states the subscription we are going to use, and what is the environment we are using, and what location, like what region it is there.
+
+We are, we are supposed to set up the great tabric capacity, prove this turf of goods that we have to give a name, we are at all of those.
+
+We need to set up a, we should have a setup file separately, where we are creating all the modules, and calling those modules in the stuff of good, and passing money in the values from here.
+
+Oh, that's what we, yes, we have to do first.
+
+So that should be done for all the environments, right?
+
+I would prefer it that way.
+
+I don't know why, um, He started like this, but um.
+
+There is a main dot TF file, right out, right in the telecom folder.
+
+Which is if you see here it's talking about the resource group, fabric capacity and all.
+
+So, we are setting up a variable, to get a fabric capacity name from the actuality of worse file. Correct?
+
+Line number 35.
+
+Okay.
+
+We have this, we have assigned a variable to get a fabric capacity name from our actual telephone code.
+
+So that's what we have to make changes.
+
+So if you go to a TFOS file, that's why we are supposed to pass the capacity name on all of those.
+
+Can you go back one level?
+
+So which one?
+
+In inside environments.
+
+We have 3 files for environments, right?
+
+So we are supposed to pass the capacity game and everything from this one.
+
+Okay.
+
+Yeah, that's the changes we have to do.
+
+We have to take care of.
+
+Like, is this just a placeholder right now?
+
+So, oh, this is the just setup file, like, um, auto fables.
+
+So, we, setup file is where, where we create the modules, that is supposed to be used in our actual terrap on code.
+
+So we cannot, we, this is to reuse in all the environments.
+
+So we are just setting it up, setting up a module for it.
+
+And this model will be called in our, the environment specific tier was filed.
+
+So for example, uh, I think you have, uh, Sheher, you have access to all the adversities, right?
+
+Yeah.
+
+Injection setup, please.
+
+Can you go to telecom?
+
+Okay, so if you see setup area.TM, this is where we are supposed to create all the modules, so we have created all the modules, saying that if you see line number 15, model data factory, which means whatever it's being passed, value being passed to this model, may be reflected in the ADF, we are creating a rush report.
+
+Okay.
+
+So, and main dot TF should be empty.
+
+There should be nothing in it, main dot TS.
+
+It should only have the global settings, nothing else.
+
+Okay.
+
+So, we have to do the setup for TF as well as, if you see uh, variables non-prof- DF, yeah, can you open that, please?
+
+So they're calling that module here.
+
+If you stole a little bit down, or...
+
+Four more, please.
+
+Yeah, wait here.
+
+So, line number 109.
+
+So that's what they're calling the module.
+
+So, we are parking the data factory name.
+
+And the private endpoint and everything that has been associated to the rate of factory from here.
+
+But the, this value, how it's being used, it's been set up in the setup. Area file.
+
+Okay.
+
+Yeah.
+
+We have to do the similar pattern.
+
+And then, so, similar to how here, like, the main TF is kind of empty.
+
+We wanted you for that there, and then use, like, the variable files, as, the variable files and the setup file.
+
+For the valuable files of what you have, set it up as, uh, inside the end of one folder, in the fabric set up repository.
+
+Yeah.
+
+Okay.
+
+But we may have to add the name, cap capacity name, and all of those details in that pile.
+
+Okay.
+
+Also, we have to set up the roller cement and all of those as well.
+
+And we can use the ingestion setup as kind of like a reference on, you know, what we should be aiming for.
+
+We can, is.
+
+Okay.
+
+I don't think I have any more questions, like, I'll probably just look through the ingestion setup.
+
+And then maybe we can be later if, like, more questions come up.
+
+But in the meantime, Melvin can work together.
+
+Um, Malvin, did you have any other questions?
+
+Yeah, I think I don't have much more questions on it.
+
+I think I just got an idea on this.
+
+You know, we can work together to understand it more.
+
+Because I haven't done this before, so I just want to know, like what are the steps involved?
+
+I haven't gone through the cloud capacity yet.
+
+I will go through that, and I will also suggest what needs to be done probably before the end of this week.
+
+Is there anything else?
+
+Is there any, like, document for this?
+
+Like, anywhere where that we can defer confluence?
+
+I don't think so.
+
+Okay.
+
+So, so here, you have any questions, uh, we can wrap up.
+
+Yeah, we're good to wrap up.
+
+Mmmm.
+
+Okay.
+
+Okay.
+
+Thanks, everyone.
+
+Thank you.
+
+Thank you.
+
+Bye.
+
+Bye. 
+
+Like is this just a placeholder right now? So this is the set up file like all those papers. So we... set up file is where we create the modules that is supposed to be used in our actual data form code. So this is to reuse in all three environments. So we are just setting it up, setting up a module for it. And this module will be called in our general specificity of our file. So for example, I thought you have, she had access to all the data positives, right? Yeah, and you do an injection set of please.
+very good enough. Okay, so if you see setup area.tm
+This is where we are supposed to create all the modules. So we have created all the modules in that, if you see line number 15, module data factory, which means whatever it's being passed, value being passed through this module, will be reflected in the idea we are creating an Azure portal. So and main.tf should be empty. There should be nothing in a main.tf. actually only have the global settings nothing else. Okay. So we'll have to do this setup for TF as well as if you see variables non-prod.fdf.f.s, that can open that list. So they are calling that module here. If you scroll a little bit down.
+Two more please. So line number 109. So that's where they are calling the module. So we are passing the data factor name and the private endpoint and everything that is also related to the data factor from here. But these values, how it's being used, it's been set up in the setup.area file.
+Okay. Yeah. Well, we have to do the similar pattern.
+And then so similar to how here like the mean to have this kind of empty, we want it in for that there and then use like the variable files as the variable files and the set up file. So the variables I filed the word here of said it was insurgent, an environment forward in the fabric set up repository. But we may have to add the name, cap capacity name and all of those details in that file. Okay.
+also, you know, basically, the oldest and most of those as well. And we can use the ingestion set up as kind of like a reference on, you know, what we should be aiming for. You can, yes. Okay.
+I don't think I have any more questions. I probably just looked through the ingestion setup and then maybe we can meet later if I have more questions than the meantime you now then can work together. And Maul, can you have any other questions? Yeah, I think I don't have much more questions on it. I think I just got an idea on this. We can work together to understand it more. Because I haven't done this before, so I just want to know what other steps you need.
+I haven't gone through the cloud catalog version of fabric capacity yet. I'll go through that and I will also suggest what needs to be done probably before the end of the week. Yeah.
+Is there anything else? Is there any document for this, like anywhere that we can different confluence? I don't think so. But there are no documents that does come in now.
+So, so how do you have any questions? So, we can wrap up. Yeah, we're good to wrap up. Okay. Thanks everyone. Thank you. Thank you. Bye.
 
 
 
